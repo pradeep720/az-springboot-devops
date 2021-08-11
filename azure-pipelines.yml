@@ -25,10 +25,3 @@ steps:
   inputs:
     sourceFolder: $(Build.SourcesDirectory)
     targetFolder: $(Build.ArtifactStagingDirectory)
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'b2de6077-dfd7-4361-bebf-a2aba5dc4a9f'
-    appType: 'webAppLinux'
-    WebAppName: 'azjavaspringboot'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
